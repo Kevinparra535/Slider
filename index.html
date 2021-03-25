@@ -1,12 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <script src="src/index.js" type="module"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/index.css">
+    <title>Document</title>
+  </head>
+  <body>
+
+
+    <main class="slider">
+      <div class="slider__item fade left">
+        <div class="card">
+          <div class="card__info">
+            <h2>Menores costos</h2>
+            <p>
+              El costo total de tener un PC de más de 4 años de antigüedad es
+              2.2 veces mayor que el de los nuevos PCs. <sup>1</sup>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider__item fade right">
+        <div class="card">
+          <div class="card__info">
+            <h2>Más productividad</h2>
+            <p>
+              Un PC con más de 4 años de antigüedad tiene una probabilidad 3.1
+              veces mayor de ser reparado lo que resulta en: 197 horas de tiempo
+              perdido y 3.0 veces menor productividad que con nuevos PCs.
+              <sup>1</sup>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider__item fade left">
+        <div class="card">
+          <div class="card__info">
+            <h2>Mayor protección</h2>
+            <p>
+              La seguridad es uno de los principales motivos para renovar PCs.
+              53% de las PyMEs aseguran haber sufrido robo de datos e
+              información en el último año, y el 69% ataques de malware o virus.
+              <sup>1,2</sup>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider__item fade right">
+        <div class="card">
+          <div class="card__info">
+            <h2>Mejor rendimiento</h2>
+            <p>
+              Finalmente, el 80% de las PyMEs comprarían PCs con Windows* 10 Pro
+              para obtener un mejor desempeño en comparación con PCs de más de 4
+              años de antigüedad. <sup>1</sup>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider__arrows" id="slider__arrows">
+        <img
+          class="slider__arrows--next"
+          src="src/img/next.svg"
+          alt="flecha"
+        />
+
+        <img
+          class="slider__arrows--prev"
+          src="src/img/prev.svg"
+          alt="flecha"
+        />
+      </div>
+
+      <div style="text-align: center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </main>
+
+    <script src="src/index.js" type="module"></script>
+  </body>
 </html>

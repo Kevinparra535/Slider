@@ -1,0 +1,129 @@
+.slider {
+  padding: 40px 0;
+  margin: 0 auto;
+  position: relative;
+  max-width: 1000px;
+
+  &__item {
+    display: none;
+    min-height: 301px;
+  }
+
+  &__arrows {
+    &--next {
+      padding: 10px;
+      position: absolute;
+      top: 30%;
+      right: 0;
+      width: 50px;
+
+      &:hover {
+        transition: 1s;
+        cursor: pointer;
+      }
+    }
+
+    &--prev {
+      padding: 10px;
+      position: absolute;
+      top: 30%;
+      left: 0;
+      width: 50px;
+
+      &:hover {
+        transition: 1s;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @include media(tablet) {
+    padding: 60px 0;
+    width: 90%;
+
+    @include display-grid;
+    @include grid-template-columns(50% 50%);
+
+    &__arrows {
+      display: none;
+    }
+
+    &__item {
+      display: flex;
+      min-height: auto;
+    }
+
+    .left {
+      justify-content: flex-start;
+    }
+
+    .right {
+      justify-content: flex-end;
+    }
+  }
+
+  @include media(tablet-2) {
+    padding: 80px 0;
+    max-width: 100%;
+    padding: 80px 0;
+
+    &__arrows {
+      display: none;
+    }
+  }
+
+  @include media(desktop-s) {
+    padding: 100px 0;
+    width: 80%;
+
+    @include display-grid;
+    @include grid-template-columns(50% 50%);
+  }
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: get-opacity($color-primario, 0.4);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+
+  @include media(tablet) {
+    display: none;
+  }
+}
+
+.active,
+.dot:hover {
+  background-color: get-opacity($color-primario, 0.8);
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
